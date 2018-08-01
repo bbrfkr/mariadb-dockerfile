@@ -3,7 +3,7 @@ source /tmp/check_variables
 
 SKIP_SECURE_INSTALLATION=0
 
-if [ -z "`ls -1 /var/lib/mysql`" ] ; then
+if [ -z "`ls -1 /var/lib/mysql | grep -v lost+found`" ] ; then
   echo "##########"
   echo "initialize datadir..."
   echo "##########"
